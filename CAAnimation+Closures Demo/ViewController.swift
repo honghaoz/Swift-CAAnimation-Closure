@@ -57,20 +57,32 @@ class ViewController: UIViewController {
         strokeEndAnimation.toValue = 1.0
         strokeEndAnimation.autoreverses = false
         strokeEndAnimation.repeatCount = 0.0
+        
         strokeEndAnimation.start = {
             println("Woo, the animation starts!")
             self.stateLabel.text = "Animating"
         }
+                
         strokeEndAnimation.completion = { finished in
             println("Awesome, the animation just finished! :)")
             self.stateLabel.text = "Finished"
         }
+        
         circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
         
         // Handy method
 //        circleLayer.addAnimationWithCompletion(strokeEndAnimation, forKey: "strokeEndAnimation", withCompletion: {finished in
 //            println("Animation is finished")
 //        })
+        
+        // Convenience method
+//        strokeEndAnimation.setStart { () -> Void in
+//            println("Hola")
+//        }
+//        
+//        strokeEndAnimation.setCompletion { (finished) -> Void in
+//            println("Bye")
+//        }
     }
 }
 

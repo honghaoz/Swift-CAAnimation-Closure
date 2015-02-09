@@ -13,10 +13,10 @@ import QuartzCore
 */
 class ZHCAAnimationDelegate: NSObject {
     /// start: A block (closure) object to be executed when the animation starts. This block has no return value and takes no argument.
-    var start: (Void -> Void)?
+    var start: (() -> Void)?
     
     /// completion: A block (closure) object to be executed when the animation ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished.
-    var completion: (Bool -> Void)?
+    var completion: ((Bool) -> Void)?
     
     /**
     Called when the animation begins its active duration.
@@ -41,7 +41,7 @@ class ZHCAAnimationDelegate: NSObject {
 extension CAAnimation {
     // Add start and completion property for CAAnimation Class
     /// start: A block (closure) object to be executed when the animation starts. This block has no return value and takes no argument.
-    var start: (Void -> Void)? {
+    var start: (() -> Void)? {
         set {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
@@ -57,8 +57,18 @@ extension CAAnimation {
         }
     }
     
+    /**
+    Convenience method for setting start
+    * Use func can have a code auto completion
+    
+    :param: start start closure
+    */
+    func setStart(#start: () -> Void) {
+        self.start = start
+    }
+    
     /// completion: A block (closure) object to be executed when the animation ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished.
-    var completion: (Bool -> Void)? {
+    var completion: ((Bool) -> Void)? {
         set {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
@@ -73,6 +83,15 @@ extension CAAnimation {
             return nil
         }
     }
+    
+    /**
+    Convenience method for setting completion
+    
+    :param: completion completion closure
+    */
+    func setCompletion(completion: ((Bool) -> Void)) {
+        self.completion = completion
+    }
 }
 
 extension CALayer {
@@ -83,7 +102,7 @@ extension CALayer {
     :param: key        A string that identifies the animation. Only one animation per unique key is added to the layer. The special key kCATransition is automatically used for transition animations. You may specify nil for this parameter.
     :param: completion A block object to be executed when the animation ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. Default value is nil.
     */
-    func addAnimationWithCompletion(anim: CAAnimation!, forKey key: String!, withCompletion completion: (Bool -> Void)? = nil) {
+    func addAnimationWithCompletion(anim: CAAnimation!, forKey key: String!, withCompletion completion: ((Bool) -> Void)? = nil) {
         anim.completion = completion
         self.addAnimation(anim, forKey: key)
     }
