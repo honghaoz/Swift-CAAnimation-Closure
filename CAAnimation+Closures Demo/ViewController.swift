@@ -62,6 +62,10 @@ class ViewController: UIViewController {
             println("Woo, the animation starts!")
             self.stateLabel.text = "Animating"
         }
+        
+        strokeEndAnimation.animating = { progress in
+            println("progress: \(progress)")
+        }
                 
         strokeEndAnimation.completion = { finished in
             println("Awesome, the animation just finished! :)")
@@ -70,19 +74,25 @@ class ViewController: UIViewController {
         
         circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
         
-        // Handy method
+//        // Handy method
 //        circleLayer.addAnimationWithCompletion(strokeEndAnimation, forKey: "strokeEndAnimation", withCompletion: {finished in
 //            println("Animation is finished")
 //        })
         
-        // Convenience method
+//        // Convenience method
 //        strokeEndAnimation.setStartClosure { () -> Void in
 //            println("Hola")
+//        }
+//        
+//        strokeEndAnimation.setAnimatingClosure { (progress) -> Void in
+//            println("progress: \(progress)")
 //        }
 //        
 //        strokeEndAnimation.setCompletionClosure { (finished) -> Void in
 //            println("Bye")
 //        }
+//        
+//        circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
     }
 }
 

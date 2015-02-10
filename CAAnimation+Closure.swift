@@ -5,6 +5,7 @@
 //  Created by Honghao Zhang on 2/5/15.
 //  Copyright (c) 2015 Honghao Zhang. All rights reserved.
 //
+//  Supported Swift version: 1.2
 
 import QuartzCore
 
@@ -18,6 +19,20 @@ class ZHCAAnimationDelegate: NSObject {
     /// completion: A block (closure) object to be executed when the animation ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished.
     var completion: ((Bool) -> Void)?
     
+    /// startTime: animation start date
+    private var startTime: NSDate!
+    private var animationDuration: NSTimeInterval!
+    private var animatingTimer: NSTimer!
+    
+    /// animating: A block (closure) object to be executed when the animation is animating. This block has no return value and takes a single CGFloat argument that indicates the progress of the animation (From 0 ..< 1)
+    var animating: ((CGFloat) -> Void)? {
+        willSet {
+            if animatingTimer == nil {
+                animatingTimer = NSTimer(timeInterval: 0, target: self, selector: "animationIsAnimating:", userInfo: nil, repeats: true)
+            }
+        }
+    }
+    
     /**
     Called when the animation begins its active duration.
     
@@ -25,6 +40,11 @@ class ZHCAAnimationDelegate: NSObject {
     */
     override func animationDidStart(theAnimation: CAAnimation) {
         start?()
+        if animating != nil {
+            animationDuration = theAnimation.duration
+            startTime = NSDate()
+            NSRunLoop.currentRunLoop().addTimer(animatingTimer, forMode: NSDefaultRunLoopMode)
+        }
     }
     
     /**
@@ -35,6 +55,19 @@ class ZHCAAnimationDelegate: NSObject {
     */
     override func animationDidStop(theAnimation: CAAnimation, finished: Bool) {
         completion?(finished)
+        animatingTimer?.invalidate()
+    }
+    
+    /**
+    Called when the animation is ongoing
+    
+    :param: timer timer
+    */
+    func animationIsAnimating(timer: NSTimer) {
+        let progress: CGFloat = CGFloat(NSDate().timeIntervalSinceDate(startTime) / animationDuration)
+        if progress < 1.0 {
+            animating?(progress)
+        }
     }
 }
 
@@ -91,6 +124,32 @@ extension CAAnimation {
     */
     func setCompletionClosure(completion: ((Bool) -> Void)) {
         self.completion = completion
+    }
+    
+    /// animating: A block (closure) object to be executed when the animation is animating. This block has no return value and takes a single CGFloat argument that indicates the progress of the animation (From 0 ..< 1)
+    var animating: ((CGFloat) -> Void)? {
+        set {
+            if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
+                self.delegate = ZHCAAnimationDelegate()
+            }
+            (self.delegate as! ZHCAAnimationDelegate).animating = newValue
+        }
+        
+        get {
+            if (self.delegate != nil) && self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
+                return (self.delegate as! ZHCAAnimationDelegate).animating
+            }
+            return nil
+        }
+    }
+    
+    /**
+    Convenience method for setting animating
+    
+    :param: animating animating closure
+    */
+    func setAnimatingClosure(animating: ((CGFloat) -> Void)) {
+        self.animating = animating
     }
 }
 
