@@ -46,7 +46,7 @@ extension CAAnimation {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
             }
-            (self.delegate! as ZHCAAnimationDelegate).start = newValue
+            (self.delegate as ZHCAAnimationDelegate).start = newValue
         }
         
         get {
@@ -73,7 +73,7 @@ extension CAAnimation {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
             }
-            (self.delegate! as ZHCAAnimationDelegate).completion = newValue
+            (self.delegate as ZHCAAnimationDelegate).completion = newValue
         }
         
         get {
