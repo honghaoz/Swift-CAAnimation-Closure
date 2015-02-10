@@ -2,7 +2,7 @@
 
 Swift extension which adds start and completion closures for CAAnimation objects.
 
-Aka, CAAnimation + Closure, CAAnimation + Block.
+Aka, CAAnimation + Closure or CAAnimation + Block.
 
 # Preview
 
