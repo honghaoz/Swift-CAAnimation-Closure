@@ -46,12 +46,12 @@ extension CAAnimation {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
             }
-            (self.delegate as ZHCAAnimationDelegate).start = newValue
+            (self.delegate as! ZHCAAnimationDelegate).start = newValue
         }
         
         get {
             if (self.delegate != nil) && self.delegate.isKindOfClass(ZHCAAnimationDelegate) {
-                return (self.delegate as ZHCAAnimationDelegate).start
+                return (self.delegate as! ZHCAAnimationDelegate).start
             }
             return nil
         }
@@ -63,7 +63,7 @@ extension CAAnimation {
     
     :param: start start closure
     */
-    func setStart(#start: () -> Void) {
+    func setStartClosure(#start: () -> Void) {
         self.start = start
     }
     
@@ -73,12 +73,12 @@ extension CAAnimation {
             if self.delegate == nil || !self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
                 self.delegate = ZHCAAnimationDelegate()
             }
-            (self.delegate as ZHCAAnimationDelegate).completion = newValue
+            (self.delegate as! ZHCAAnimationDelegate).completion = newValue
         }
         
         get {
             if (self.delegate != nil) && self.delegate!.isKindOfClass(ZHCAAnimationDelegate) {
-                return (self.delegate as ZHCAAnimationDelegate).completion
+                return (self.delegate as! ZHCAAnimationDelegate).completion
             }
             return nil
         }
@@ -89,7 +89,7 @@ extension CAAnimation {
     
     :param: completion completion closure
     */
-    func setCompletion(completion: ((Bool) -> Void)) {
+    func setCompletionClosure(completion: ((Bool) -> Void)) {
         self.completion = completion
     }
 }

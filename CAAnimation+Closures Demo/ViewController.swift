@@ -76,11 +76,11 @@ class ViewController: UIViewController {
 //        })
         
         // Convenience method
-//        strokeEndAnimation.setStart { () -> Void in
+//        strokeEndAnimation.setStartClosure { () -> Void in
 //            println("Hola")
 //        }
 //        
-//        strokeEndAnimation.setCompletion { (finished) -> Void in
+//        strokeEndAnimation.setCompletionClosure { (finished) -> Void in
 //            println("Bye")
 //        }
     }
