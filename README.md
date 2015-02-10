@@ -6,7 +6,11 @@ Aka, CAAnimation + Closure or CAAnimation + Block.
 
 # Preview
 
-![demo](https://raw.githubusercontent.com/honghaoz/Swift-CAAnimation-Closure/master/CAAnimation+Closures%20Demo/demo-full.gif)
+### Start and Completion
+![demo-start-completion](https://raw.githubusercontent.com/honghaoz/Swift-CAAnimation-Closure/master/CAAnimation+Closures%20Demo/demo-start-stop.gif)
+
+### Animating (Progress)
+![demo-animating](https://raw.githubusercontent.com/honghaoz/Swift-CAAnimation-Closure/master/CAAnimation+Closures%20Demo/demo-animating.gif)
 
 # API
 
