@@ -1,6 +1,6 @@
 # Swift-CAAnimation-Closure
 
-Swift extension which adds start and completion closures for CAAnimation objects.
+Swift extension which adds start, animating and completion closures for CAAnimation objects.
 
 Aka, CAAnimation + Closure or CAAnimation + Block.
 
@@ -23,6 +23,11 @@ animation.toValue = 1.0
 
 animation.start = {
     println("Woo, the animation starts!")
+    // ...
+}
+
+strokeEndAnimation.animating = { progress in
+    println("progress: \(progress)")
     // ...
 }
 
