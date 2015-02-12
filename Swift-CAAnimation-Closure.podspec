@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "Honghao Zhang" => "zhh358@gmail.com" }
   s.source           = { :git => "https://github.com/honghaoz/Swift-CAAnimation-Closure.git", :tag => 1.3 }
-  s.source_files     = 'CAAnimation+Closure/CAAnimation+Closure.swift'
-  s.platform         = :ios, '7.0'
+  s.source_files     = 'CAAnimation+Closure/CAAnimation+Closure_1.1.swift'
+  # s.platform         = :ios, '7.0'
   s.requires_arc     = true
 end
