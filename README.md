@@ -12,6 +12,23 @@ Aka, CAAnimation + Closure or CAAnimation + Block.
 ### Animating (Progress)
 ![demo-animating](https://raw.githubusercontent.com/honghaoz/Swift-CAAnimation-Closure/master/Demo/demo-animating.gif)
 
+# Installation
+####CocoaPods (Swift 1.1)
+
+```ruby
+pod 'Swift-CAAnimation-Closure', '~> 1.3.1'
+```
+
+Note CocoaPods 0.36 beta is required, you can update it with the following command:
+
+```bash
+$ [sudo] gem install cocoapods --pre
+```
+
+####Manually
+
+Just add `CAAnimation+Closure_1.1.swift` file into your project. (`CAAnimation+Closure.swift` for Swift 1.2)
+
 # API
 
 ### CAAnimation API
