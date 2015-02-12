@@ -16,7 +16,7 @@ Aka, CAAnimation + Closure or CAAnimation + Block.
 ####CocoaPods (Swift 1.1)
 
 ```ruby
-pod 'Swift-CAAnimation-Closure', '~> 1.3.1'
+pod 'Swift-CAAnimation-Closure', '~> 1.3'
 ```
 
 Note CocoaPods 0.36 beta is required, you can update it with the following command:
