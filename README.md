@@ -27,7 +27,7 @@ $ [sudo] gem install cocoapods --pre
 
 ####Manually
 
-Just add `CAAnimation+Closure_1.1.swift` file into your project. (`CAAnimation+Closure.swift` for Swift 1.2)
+Just add `CAAnimation+Closure.swift` file into your project.
 
 # API
 
