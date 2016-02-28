@@ -28,35 +28,35 @@ Just add `CAAnimation+Closure.swift` file into your project.
 # API
 
 ### CAAnimation API
-```
+```swift
 let animation = CABasicAnimation(keyPath: "strokeEnd")
 animation.duration = 2.0
 animation.fromValue = 0.0
 animation.toValue = 1.0
 
 animation.start = {
-    println("Woo, the animation starts!")
+    print("Woo, the animation starts!")
     // ...
 }
 
-strokeEndAnimation.animating = { progress in
-    println("progress: \(progress)")
+animation.animating = { progress in
+    print("progress: \(progress)")
     // ...
 }
 
 animation.completion = { finished in
-    println("Awesome, the animation just finished! :)")
+    print("Awesome, the animation just finished! :)")
     // ...
 }
 
-layer.addAnimation(animation, forKey: "strokeEndAnimation")
+layer.addAnimation(animation, forKey: "animationKey")
 ```
 ### CALayer API
 
 ```
-layer.addAnimationWithCompletion(animation, forKey: "strokeEndAnimation", withCompletion: {finished in
-    println("Animation is finished")
-})
+layer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation") { finished in
+	print("Animation is finished")
+}
 ```
 
 # The MIT License (MIT)
