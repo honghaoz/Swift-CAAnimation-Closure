@@ -58,41 +58,26 @@ class ViewController: UIViewController {
         strokeEndAnimation.autoreverses = false
         strokeEndAnimation.repeatCount = 0.0
         
-        strokeEndAnimation.start = {
-            println("Woo, the animation starts!")
+        strokeEndAnimation.start = { [unowned self] in
+            print("Woo, the animation starts!")
             self.stateLabel.text = "Animating"
         }
         
         strokeEndAnimation.animating = { progress in
-            println("progress: \(progress)")
+            print("progress: \(progress)")
         }
                 
-        strokeEndAnimation.completion = { finished in
-            println("Awesome, the animation just finished! :)")
+        strokeEndAnimation.completion = { [unowned self] finished in
+            print("Awesome, the animation just finished! :)")
             self.stateLabel.text = "Finished"
         }
         
         circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
-        
-//        // Handy method
-//        circleLayer.addAnimationWithCompletion(strokeEndAnimation, forKey: "strokeEndAnimation", withCompletion: {finished in
-//            println("Animation is finished")
-//        })
-        
-//        // Convenience method
-//        strokeEndAnimation.setStartClosure { () -> Void in
-//            println("Hola")
-//        }
-//        
-//        strokeEndAnimation.setAnimatingClosure { (progress) -> Void in
-//            println("progress: \(progress)")
-//        }
-//        
-//        strokeEndAnimation.setCompletionClosure { (finished) -> Void in
-//            println("Bye")
-//        }
-//        
-//        circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
+		
+        // Handy method
+//		circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation") { finished in
+//			print("Animation is finished")
+//		}
     }
 }
 

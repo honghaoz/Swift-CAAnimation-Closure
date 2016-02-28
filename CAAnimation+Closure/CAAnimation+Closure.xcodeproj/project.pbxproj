@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0202CBE71C827DA00093CCF7 /* CAAnimation+Closure.h in Headers */ = {isa = PBXBuildFile; fileRef = 0202CBE61C827DA00093CCF7 /* CAAnimation+Closure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0202CBEE1C827DA00093CCF7 /* SwiftCAAnimationClosure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0202CBE31C827DA00093CCF7 /* SwiftCAAnimationClosure.framework */; };
+		0202CBF31C827DA00093CCF7 /* CAAnimation_ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202CBF21C827DA00093CCF7 /* CAAnimation_ClosureTests.swift */; };
+		0202CC041C8285CC0093CCF7 /* CAAnimation+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202CC031C8285CC0093CCF7 /* CAAnimation+Closure.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0202CBEF1C827DA00093CCF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0202CBDA1C827DA00093CCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0202CBE21C827DA00093CCF7;
+			remoteInfo = "CAAnimation+Closure";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0202CBE31C827DA00093CCF7 /* SwiftCAAnimationClosure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCAAnimationClosure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0202CBE61C827DA00093CCF7 /* CAAnimation+Closure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Closure.h"; sourceTree = "<group>"; };
+		0202CBE81C827DA00093CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0202CBED1C827DA00093CCF7 /* CAAnimation+ClosureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CAAnimation+ClosureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0202CBF21C827DA00093CCF7 /* CAAnimation_ClosureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAnimation_ClosureTests.swift; sourceTree = "<group>"; };
+		0202CBF41C827DA00093CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0202CC031C8285CC0093CCF7 /* CAAnimation+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Closure.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0202CBDF1C827DA00093CCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0202CBEA1C827DA00093CCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0202CBEE1C827DA00093CCF7 /* SwiftCAAnimationClosure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0202CBD91C827DA00093CCF7 = {
+			isa = PBXGroup;
+			children = (
+				0202CBE51C827DA00093CCF7 /* CAAnimation+Closure */,
+				0202CBF11C827DA00093CCF7 /* CAAnimation+ClosureTests */,
+				0202CBE41C827DA00093CCF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0202CBE41C827DA00093CCF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0202CBE31C827DA00093CCF7 /* SwiftCAAnimationClosure.framework */,
+				0202CBED1C827DA00093CCF7 /* CAAnimation+ClosureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0202CBE51C827DA00093CCF7 /* CAAnimation+Closure */ = {
+			isa = PBXGroup;
+			children = (
+				0202CC021C8285CC0093CCF7 /* Source */,
+				0202CBE61C827DA00093CCF7 /* CAAnimation+Closure.h */,
+				0202CBE81C827DA00093CCF7 /* Info.plist */,
+			);
+			path = "CAAnimation+Closure";
+			sourceTree = "<group>";
+		};
+		0202CBF11C827DA00093CCF7 /* CAAnimation+ClosureTests */ = {
+			isa = PBXGroup;
+			children = (
+				0202CBF21C827DA00093CCF7 /* CAAnimation_ClosureTests.swift */,
+				0202CBF41C827DA00093CCF7 /* Info.plist */,
+			);
+			path = "CAAnimation+ClosureTests";
+			sourceTree = "<group>";
+		};
+		0202CC021C8285CC0093CCF7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0202CC031C8285CC0093CCF7 /* CAAnimation+Closure.swift */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0202CBE01C827DA00093CCF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0202CBE71C827DA00093CCF7 /* CAAnimation+Closure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0202CBE21C827DA00093CCF7 /* CAAnimation+Closure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0202CBF71C827DA00093CCF7 /* Build configuration list for PBXNativeTarget "CAAnimation+Closure" */;
+			buildPhases = (
+				0202CBDE1C827DA00093CCF7 /* Sources */,
+				0202CBDF1C827DA00093CCF7 /* Frameworks */,
+				0202CBE01C827DA00093CCF7 /* Headers */,
+				0202CBE11C827DA00093CCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CAAnimation+Closure";
+			productName = "CAAnimation+Closure";
+			productReference = 0202CBE31C827DA00093CCF7 /* SwiftCAAnimationClosure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0202CBEC1C827DA00093CCF7 /* CAAnimation+ClosureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0202CBFA1C827DA00093CCF7 /* Build configuration list for PBXNativeTarget "CAAnimation+ClosureTests" */;
+			buildPhases = (
+				0202CBE91C827DA00093CCF7 /* Sources */,
+				0202CBEA1C827DA00093CCF7 /* Frameworks */,
+				0202CBEB1C827DA00093CCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0202CBF01C827DA00093CCF7 /* PBXTargetDependency */,
+			);
+			name = "CAAnimation+ClosureTests";
+			productName = "CAAnimation+ClosureTests";
+			productReference = 0202CBED1C827DA00093CCF7 /* CAAnimation+ClosureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0202CBDA1C827DA00093CCF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Honghao Zhang";
+				TargetAttributes = {
+					0202CBE21C827DA00093CCF7 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					0202CBEC1C827DA00093CCF7 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0202CBDD1C827DA00093CCF7 /* Build configuration list for PBXProject "CAAnimation+Closure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0202CBD91C827DA00093CCF7;
+			productRefGroup = 0202CBE41C827DA00093CCF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0202CBE21C827DA00093CCF7 /* CAAnimation+Closure */,
+				0202CBEC1C827DA00093CCF7 /* CAAnimation+ClosureTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0202CBE11C827DA00093CCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0202CBEB1C827DA00093CCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0202CBDE1C827DA00093CCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0202CC041C8285CC0093CCF7 /* CAAnimation+Closure.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0202CBE91C827DA00093CCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0202CBF31C827DA00093CCF7 /* CAAnimation_ClosureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0202CBF01C827DA00093CCF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0202CBE21C827DA00093CCF7 /* CAAnimation+Closure */;
+			targetProxy = 0202CBEF1C827DA00093CCF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0202CBF51C827DA00093CCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0202CBF61C827DA00093CCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0202CBF81C827DA00093CCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CAAnimation+Closure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honghaoz.CAAnimation-Closure";
+				PRODUCT_NAME = SwiftCAAnimationClosure;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0202CBF91C827DA00093CCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CAAnimation+Closure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honghaoz.CAAnimation-Closure";
+				PRODUCT_NAME = SwiftCAAnimationClosure;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0202CBFB1C827DA00093CCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CAAnimation+ClosureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honghaoz.CAAnimation-ClosureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0202CBFC1C827DA00093CCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CAAnimation+ClosureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honghaoz.CAAnimation-ClosureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0202CBDD1C827DA00093CCF7 /* Build configuration list for PBXProject "CAAnimation+Closure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0202CBF51C827DA00093CCF7 /* Debug */,
+				0202CBF61C827DA00093CCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0202CBF71C827DA00093CCF7 /* Build configuration list for PBXNativeTarget "CAAnimation+Closure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0202CBF81C827DA00093CCF7 /* Debug */,
+				0202CBF91C827DA00093CCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0202CBFA1C827DA00093CCF7 /* Build configuration list for PBXNativeTarget "CAAnimation+ClosureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0202CBFB1C827DA00093CCF7 /* Debug */,
+				0202CBFC1C827DA00093CCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0202CBDA1C827DA00093CCF7 /* Project object */;
+}

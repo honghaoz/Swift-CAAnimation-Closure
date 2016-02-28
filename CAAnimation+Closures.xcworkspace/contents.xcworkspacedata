@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CAAnimation+Closure/CAAnimation+Closure.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Demo/CAAnimation+Closures Demo.xcodeproj">
+   </FileRef>
+</Workspace>

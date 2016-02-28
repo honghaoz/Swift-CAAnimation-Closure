@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		026BA4231A8D0F7A003C90DB /* CAAnimation+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BA4221A8D0F7A003C90DB /* CAAnimation+Closure.swift */; };
+		0202CC011C827EAB0093CCF7 /* CAAnimation+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202CC001C827EAB0093CCF7 /* CAAnimation+Closure.swift */; };
 		02BB53EE1A84782500B196A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB53ED1A84782500B196A2 /* AppDelegate.swift */; };
 		02BB53F01A84782500B196A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB53EF1A84782500B196A2 /* ViewController.swift */; };
 		02BB53F31A84782500B196A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BB53F11A84782500B196A2 /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		026BA4221A8D0F7A003C90DB /* CAAnimation+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CAAnimation+Closure.swift"; path = "../../../CAAnimation+Closure/CAAnimation+Closure.swift"; sourceTree = "<group>"; };
+		0202CC001C827EAB0093CCF7 /* CAAnimation+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CAAnimation+Closure.swift"; path = "../../Source/CAAnimation+Closure.swift"; sourceTree = "<group>"; };
 		02BB53E81A84782500B196A2 /* CAAnimation+Closures Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAAnimation+Closures Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BB53EC1A84782500B196A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BB53ED1A84782500B196A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		02BB53EA1A84782500B196A2 /* CAAnimation+Closures Demo */ = {
 			isa = PBXGroup;
 			children = (
-				026BA4221A8D0F7A003C90DB /* CAAnimation+Closure.swift */,
+				0202CC001C827EAB0093CCF7 /* CAAnimation+Closure.swift */,
 				02BB53ED1A84782500B196A2 /* AppDelegate.swift */,
 				02BB53EF1A84782500B196A2 /* ViewController.swift */,
 				02BB53F11A84782500B196A2 /* Main.storyboard */,
@@ -159,7 +159,8 @@
 		02BB53E01A84782500B196A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Honghao Zhang";
 				TargetAttributes = {
 					02BB53E71A84782500B196A2 = {
@@ -217,7 +218,7 @@
 			files = (
 				02BB53F01A84782500B196A2 /* ViewController.swift in Sources */,
 				02BB53EE1A84782500B196A2 /* AppDelegate.swift in Sources */,
-				026BA4231A8D0F7A003C90DB /* CAAnimation+Closure.swift in Sources */,
+				0202CC011C827EAB0093CCF7 /* CAAnimation+Closure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +280,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,7 +345,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CAAnimation+Closures Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "honghaoz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,7 +357,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CAAnimation+Closures Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "honghaoz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -372,6 +378,7 @@
 				);
 				INFOPLIST_FILE = "CAAnimation+Closures DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "honghaoz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAAnimation+Closures Demo.app/CAAnimation+Closures Demo";
 			};
@@ -387,6 +394,7 @@
 				);
 				INFOPLIST_FILE = "CAAnimation+Closures DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "honghaoz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAAnimation+Closures Demo.app/CAAnimation+Closures Demo";
 			};
