@@ -32,24 +32,24 @@ class ViewController: UIViewController {
             let lineWidth: CGFloat = 20.0
             
             // Setup path
-            let arcCenter: CGPoint = CGPointMake(CGRectGetMidX(circleView.bounds), CGRectGetMidY(circleView.bounds))
-            let radius: CGFloat = fmin(CGRectGetMidX(circleView.bounds), CGRectGetMidY(circleView.bounds)) - lineWidth / 2.0
+            let arcCenter: CGPoint = CGPoint(x: circleView.bounds.midX, y: circleView.bounds.midY)
+            let radius: CGFloat = fmin(circleView.bounds.midX, circleView.bounds.midY) - lineWidth / 2.0
             let circlePath = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: degreeToRadian(-90.0), endAngle: degreeToRadian(-90 + 360.0), clockwise: true)
             
             // Add layer
             circleLayer = CAShapeLayer()
             circleView.layer.addSublayer(circleLayer)
-            circleLayer.path = circlePath.CGPath
-            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.path = circlePath.cgPath
+            circleLayer.fillColor = UIColor.clear.cgColor
             circleLayer.lineWidth = lineWidth
-            circleLayer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.5).CGColor
+            circleLayer.strokeColor = UIColor.blue.withAlphaComponent(0.5).cgColor
             
             circleLayer.strokeStart = 0.0
             circleLayer.strokeEnd = 1.0
         }
     }
     
-    @IBAction func animate(sender: AnyObject) {
+    @IBAction func animate(_ sender: AnyObject) {
         // Animation
         let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeEndAnimation.duration = 2.0
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
             self.stateLabel.text = "Finished"
         }
         
-        circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
+        circleLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
 		
         // Handy method
 //		circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation") { finished in
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: Helper functions
-func degreeToRadian(degree: CGFloat) -> CGFloat {
-    return CGFloat(M_PI / 180) * degree
+func degreeToRadian(_ degree: CGFloat) -> CGFloat {
+    return CGFloat(Double.pi / 180) * degree
 }
 
