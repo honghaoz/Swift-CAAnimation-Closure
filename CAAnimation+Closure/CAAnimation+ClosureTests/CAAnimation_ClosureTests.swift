@@ -22,8 +22,6 @@ class CAAnimation_ClosureTests: XCTestCase {
     }
     
     func test() {
-		let expectation = self.expectationWithDescription("completion executed")
-		
 		let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
 		strokeEndAnimation.duration = 2.0
 		strokeEndAnimation.fromValue = 0.0
@@ -31,16 +29,19 @@ class CAAnimation_ClosureTests: XCTestCase {
 		strokeEndAnimation.autoreverses = false
 		strokeEndAnimation.repeatCount = 0.0
 		
+        let startExpectation = self.expectation(description: "start executed")
 		strokeEndAnimation.start = {
 			print("Woo, the animation starts!")
+            startExpectation.fulfill()
 		}
-		
+
 		strokeEndAnimation.animating = { progress in
 			print("progress: \(progress)")
 		}
 		
+        let completionExpectation = self.expectation(description: "completion executed")
 		strokeEndAnimation.completion = { finished in
-			expectation.fulfill()
+			completionExpectation.fulfill()
 			print("Awesome, the animation just finished! :)")
 		}
 		
@@ -49,8 +50,8 @@ class CAAnimation_ClosureTests: XCTestCase {
 		XCTAssertNotNil(strokeEndAnimation.completion)
 		
 		let circleLayer = CAShapeLayer()
-		circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEndAnimation")
+		circleLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
 		
-		waitForExpectationsWithTimeout(2.1, handler: nil)
+        wait(for: [startExpectation, completionExpectation], timeout: 3.0, enforceOrder: true)
     }
 }
